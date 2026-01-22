@@ -6,6 +6,14 @@ from PyPDF2 import PdfReader
 
 st.set_page_config(page_title="PDF Address Extractor", layout="centered")
 st.title("PDF → Address CSV Extractor")
+st.markdown('''
+Common find and replace (case sensitive):  
+"r ," → "r,"  
+"W a" → "Wa"  
+"V i" → "Vi"  
+"f f" → "ff"  
+"1 1" → "11"  
+''')
 
 def extract_addresses_from_pdf(file_like):
     """Extract text from each page of a PDF file-like object."""
